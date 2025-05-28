@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .form-status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Contact Form</h1>
+    <p>Use this form to test the Google Sheets integration.</p>
+    
+    <form id="testContactForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+    </form>
+    
+    <div id="statusMessage" class="form-status"></div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const testContactForm = document.getElementById('testContactForm');
+            const statusMessage = document.getElementById('statusMessage');
+            
+            testContactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                // Basic validation
+                if (!name || !email || !message) {
+                    statusMessage.textContent = 'Please fill in all fields';
+                    statusMessage.className = 'form-status error';
+                    return;
+                }
+                
+                // Create data object to send
+                const formData = {
+                    name: name,
+                    email: email,
+                    message: message
+                };
+                
+                // Show loading state
+                const submitBtn = testContactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+                
+                // Send data to Google Sheets using the deployed Google Apps Script
+                // Replace this URL with the actual deployed web app URL from Google Apps Script
+                const scriptURL = 'https://script.google.com/macros/s/YOUR_DEPLOYED_SCRIPT_ID/exec';
+                
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: JSON.stringify(formData),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.result === 'success') {
+                        // Show success message
+                        statusMessage.textContent = 'Thank you! Your message has been sent successfully and added to the Google Sheet.';
+                        statusMessage.className = 'form-status success';
+                        testContactForm.reset();
+                    } else {
+                        // Show error message
+                        statusMessage.textContent = 'There was an error sending your message. Please try again.';
+                        statusMessage.className = 'form-status error';
+                    }
+                    
+                    // Reset button
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                })
+                .catch(error => {
+                    // Show error message
+                    statusMessage.textContent = 'There was an error sending your message. Please try again.';
+                    statusMessage.className = 'form-status error';
+                    console.error('Error:', error);
+                    
+                    // Reset button
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
