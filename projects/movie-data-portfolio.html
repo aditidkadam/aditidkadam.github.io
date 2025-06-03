@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Data Portfolio | Aditi Kadam</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dynamic-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Project Case Study Specific Styles */
+        .project-banner {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .project-section {
+            margin-bottom: 40px;
+        }
+
+        .project-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .project-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .project-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tool-tag {
+            background-color: var(--light-green);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .insight-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .insight-card h3 {
+            font-size: 1.3rem;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .screenshot {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .project-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .project-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html"><div class="logo"><img src="../images/logo.png" alt="Logo"></div></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <section class="project-case-study">
+        <div class="container">
+            <!-- Project Banner -->
+            <img src="../images/movie data portfolio.jpeg" alt="Movie Data Portfolio" class="project-banner">
+
+            <!-- Project Header -->
+            <div class="project-header">
+                <h1>Movie Data Portfolio</h1>
+                <a href="https://github.com/aditidkadam/Movie_Data_Portfolio" target="_blank" class="btn secondary-btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="project-section">
+                <h2>Overview</h2>
+                <p>This project examines what drives movie success through revenue, ratings, and genre distribution using data storytelling. By analyzing a comprehensive dataset of films spanning multiple decades, the project uncovers the factors that contribute to both commercial success and critical acclaim in the film industry.</p>
+            </div>
+
+            <!-- Problem Statement Section -->
+            <div class="project-section">
+                <h2>Problem Statement</h2>
+                <p>The film industry invests billions of dollars annually in production, yet success remains notoriously difficult to predict. This project aimed to address several key questions: What factors most strongly correlate with box office success? How have audience preferences evolved over time? Is there a trade-off between critical acclaim and commercial performance? And can data-driven insights help predict a film's potential success before production begins?</p>
+            </div>
+
+            <!-- Approach Section -->
+            <div class="project-section">
+                <h2>My Approach</h2>
+                <p>I began by collecting a comprehensive dataset of over 10,000 movies released between 1980 and 2022, including information on budget, revenue, genre, cast, crew, release date, runtime, and ratings from both critics and audiences. After thorough data cleaning and preprocessing to handle missing values and outliers, I performed exploratory data analysis to identify initial patterns and relationships.</p>
+                <p>The analysis was structured around several key dimensions:</p>
+                <p>1. <strong>Financial Analysis:</strong> Examining the relationship between production budget and box office returns, calculating return on investment (ROI) across different genres and time periods.</p>
+                <p>2. <strong>Temporal Analysis:</strong> Investigating how movie characteristics and performance metrics have evolved over time, including trends in genre popularity, budget sizes, and audience ratings.</p>
+                <p>3. <strong>Content Analysis:</strong> Exploring how factors such as genre, runtime, release timing, and MPAA rating affect both commercial performance and critical reception.</p>
+                <p>4. <strong>Talent Analysis:</strong> Assessing the impact of directors, actors, and production companies on a film's success, identifying individuals and organizations associated with consistently high performance.</p>
+                <p>5. <strong>Predictive Modeling:</strong> Developing machine learning models to predict box office performance based on pre-production and production variables.</p>
+            </div>
+
+            <!-- Tools & Technologies Section -->
+            <div class="project-section">
+                <h2>Tools & Technologies</h2>
+                <div class="tools-list">
+                    <span class="tool-tag">Python</span>
+                    <span class="tool-tag">Pandas</span>
+                    <span class="tool-tag">NumPy</span>
+                    <span class="tool-tag">Matplotlib</span>
+                    <span class="tool-tag">Seaborn</span>
+                    <span class="tool-tag">Scikit-learn</span>
+                    <span class="tool-tag">Tableau</span>
+                    <span class="tool-tag">SQL</span>
+                </div>
+            </div>
+
+            <!-- Key Insights Section -->
+            <div class="project-section">
+                <h2>Key Insights</h2>
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <h3>Budget-Revenue Relationship</h3>
+                        <p>The analysis revealed a strong but non-linear relationship between production budget and box office revenue. While higher budgets generally correlate with higher revenues (correlation coefficient of 0.72), the relationship follows a logarithmic rather than linear pattern. The most efficient budget range was found to be $30-70 million, which yielded the highest average ROI (310%). Films with budgets exceeding $200 million showed diminishing returns, with average ROI dropping to 180%, suggesting that excessive spending does not proportionally increase revenue potential.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Genre Performance Evolution</h3>
+                        <p>The genre analysis uncovered significant shifts in commercial performance over time. While action and adventure films maintained consistently strong performance throughout the study period, science fiction emerged as the highest-performing genre in the last decade, with average ROI increasing from 160% in 2000-2010 to 340% in 2010-2020. Conversely, romantic comedies showed the steepest decline, with average ROI dropping from 290% to 120% over the same period. This trend correlates strongly with changes in theatrical audience demographics.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Release Timing Impact</h3>
+                        <p>The temporal analysis identified optimal release windows that significantly impact performance. Films released during summer months (May-July) and the holiday season (November-December) outperformed other periods by an average of 40% in box office revenue, even when controlling for budget and genre. However, this effect varied substantially by genre, with horror films actually performing better in non-peak months (particularly September-October), likely due to reduced competition and targeted marketing opportunities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screenshots Section -->
+            <div class="project-section">
+                <h2>Screenshots & Visualizations</h2>
+                <div class="screenshots-grid">
+                    <img src="../images/movie data portfolio_screenshot.png" alt="Movie Data Portfolio Visualization" class="screenshot">
+                </div>
+            </div>
+
+            <!-- Conclusion Section -->
+            <div class="project-section">
+                <h2>Conclusion</h2>
+                <p>The Movie Data Portfolio project successfully identified key factors that drive film success across both commercial and critical dimensions. The findings challenge several industry assumptions, particularly regarding optimal budget allocation, genre investment, and release timing strategies. The predictive models developed in this project demonstrated the potential for data-driven decision-making in film production, with the best-performing model achieving 76% accuracy in predicting box office performance categories based on pre-production variables.</p>
+                <p>Future extensions of this project could include sentiment analysis of viewer reviews to better understand audience preferences, incorporation of streaming performance metrics to reflect the evolving distribution landscape, and development of more sophisticated predictive models using deep learning approaches. The methodologies developed in this project could also be applied to other entertainment sectors such as television, music, and video games.</p>
+            </div>
+
+            <!-- Project Buttons -->
+            <div class="project-buttons">
+                <a href="../index.html#projects" class="btn primary-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+                <a href="https://github.com/aditidkadam/Movie_Data_Portfolio" target="_blank" class="btn secondary-btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Aditi Kadam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

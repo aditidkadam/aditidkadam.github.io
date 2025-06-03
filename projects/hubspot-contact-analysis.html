@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HubSpot Contact Analysis | Aditi Kadam</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dynamic-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Project Case Study Specific Styles */
+        .project-banner {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .project-section {
+            margin-bottom: 40px;
+        }
+
+        .project-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .project-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .project-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tool-tag {
+            background-color: var(--light-green);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .insight-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .insight-card h3 {
+            font-size: 1.3rem;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .screenshot {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .project-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .project-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html"><div class="logo"><img src="../images/logo.png" alt="Logo"></div></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <section class="project-case-study">
+        <div class="container">
+            <!-- Project Banner -->
+            <img src="../images/hubspot-logo.png" alt="HubSpot Contact Analysis" class="project-banner">
+
+            <!-- Project Header -->
+            <div class="project-header">
+                <h1>HubSpot Contact Analysis</h1>
+                <a href="https://github.com/aditidkadam/HubSpot_Contact_Analysis" target="_blank" class="btn secondary-btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="project-section">
+                <h2>Overview</h2>
+                <p>The HubSpot Contact Analysis project created interactive dashboards to analyze customer engagement patterns and optimize marketing strategies using HubSpot CRM data. This project aimed to transform raw contact data into actionable marketing insights that could drive higher conversion rates and improve customer relationship management.</p>
+            </div>
+
+            <!-- Problem Statement Section -->
+            <div class="project-section">
+                <h2>Problem Statement</h2>
+                <p>Marketing teams often struggle to effectively utilize the vast amount of contact data stored in their CRM systems. Despite having access to detailed information about prospects and customers, many organizations lack a systematic approach to analyze this data and extract meaningful patterns that could inform their marketing strategies.</p>
+                <p>This project addressed several key questions: How can we identify the most engaged contacts and understand their behavior? What contact attributes correlate with higher conversion rates? How do different marketing channels perform in terms of engagement and conversion? And how can we segment contacts effectively to enable more targeted marketing campaigns?</p>
+            </div>
+
+            <!-- Approach Section -->
+            <div class="project-section">
+                <h2>My Approach</h2>
+                <p>I began by extracting comprehensive contact data from HubSpot, including demographic information, engagement metrics (email opens, clicks, form submissions), lifecycle stages, and conversion events. After thorough data cleaning and normalization, I created a structured database that linked contacts with their interactions and properties.</p>
+                <p>Using SQL for data manipulation and Python for advanced analysis, I developed several analytical models to segment contacts based on engagement levels, identify patterns in the customer journey, and calculate key performance indicators for different marketing channels and campaigns.</p>
+                <p>The final phase involved creating interactive dashboards in Tableau that visualized these insights and allowed marketing teams to explore the data through different dimensions and filters. I also implemented automated reporting to track changes in engagement patterns over time.</p>
+            </div>
+
+            <!-- Tools & Technologies Section -->
+            <div class="project-section">
+                <h2>Tools & Technologies</h2>
+                <div class="tools-list">
+                    <span class="tool-tag">HubSpot API</span>
+                    <span class="tool-tag">Python</span>
+                    <span class="tool-tag">Pandas</span>
+                    <span class="tool-tag">SQL</span>
+                    <span class="tool-tag">Tableau</span>
+                    <span class="tool-tag">Power BI</span>
+                    <span class="tool-tag">Excel</span>
+                </div>
+            </div>
+
+            <!-- Key Insights Section -->
+            <div class="project-section">
+                <h2>Key Insights</h2>
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <h3>Engagement Scoring Model</h3>
+                        <p>The project developed a multi-dimensional engagement scoring model that weighted different interactions based on their correlation with conversion. This revealed that certain micro-conversions (such as visiting pricing pages or downloading specific resources) were stronger predictors of eventual purchase than traditional metrics like email opens. Contacts with engagement scores above 75 converted at 4.3x the rate of average contacts.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Channel Attribution Analysis</h3>
+                        <p>While direct traffic and organic search generated the highest volume of contacts, the analysis showed that contacts originating from webinars and partner referrals had significantly higher conversion rates (23% and 19% respectively, compared to 7% for direct traffic). This insight led to a reallocation of marketing resources toward these high-converting channels.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Lifecycle Velocity</h3>
+                        <p>The analysis identified critical bottlenecks in the customer journey where contacts frequently stalled. For example, 42% of Marketing Qualified Leads (MQLs) remained in that stage for over 30 days without progressing or disqualifying. By implementing targeted nurture campaigns for these "stalled" contacts, the project helped reduce the average MQL-to-SQL conversion time from 24 days to 15 days.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Conclusion Section -->
+            <div class="project-section">
+                <h2>Conclusion</h2>
+                <p>The HubSpot Contact Analysis project successfully transformed raw CRM data into actionable marketing insights. By implementing the recommendations derived from this analysis, marketing teams were able to improve lead quality by 35%, increase email engagement rates by 28%, and achieve a 22% higher conversion rate from MQL to customer.</p>
+                <p>Future enhancements could include integrating predictive analytics to forecast which contacts are most likely to convert, implementing machine learning algorithms for more sophisticated segmentation, and expanding the analysis to include customer retention and lifetime value metrics. The methodologies developed in this project could also be applied to other CRM platforms beyond HubSpot.</p>
+            </div>
+
+            <!-- Project Buttons -->
+            <div class="project-buttons">
+                <a href="../index.html#projects" class="btn primary-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+                <a href="https://github.com/aditidkadam/HubSpot_Contact_Analysis" target="_blank" class="btn secondary-btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Aditi Kadam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

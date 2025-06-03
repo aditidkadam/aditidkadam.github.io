@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title | Aditi Kadam</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dynamic-styles.css">
+    <link rel="stylesheet" href="../css/case-study-enhancements.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Project Case Study Specific Styles */
+        .project-banner {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .project-section {
+            margin-bottom: 40px;
+        }
+
+        .project-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .project-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .project-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tool-tag {
+            background-color: var(--light-green);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .insight-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .insight-card h3 {
+            font-size: 1.3rem;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .screenshot {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .project-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .project-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html"><div class="logo"><img src="../images/logo.png" alt="Logo"></div></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <section class="project-case-study">
+        <div class="container">
+            <!-- Project Banner -->
+            <img src="../images/project-image.jpg" alt="Project Banner" class="project-banner">
+
+            <!-- Project Header -->
+            <div class="project-header">
+                <h1>Project Title</h1>
+                <a href="https://github.com/username/project-repo" target="_blank" class="btn secondary-btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="project-section">
+                <h2>Overview</h2>
+                <p>A short introduction to what the project is and why it was done. This section should provide context and a high-level summary of the project's purpose and goals.</p>
+            </div>
+
+            <!-- Problem Statement Section -->
+            <div class="project-section">
+                <h2>Problem Statement</h2>
+                <p>The real-world question or challenge tackled in this project. This section should clearly define the problem and explain why it's important or interesting to solve.</p>
+            </div>
+
+            <!-- Approach Section -->
+            <div class="project-section">
+                <h2>My Approach</h2>
+                <p>A description of the data sources, tools, and techniques used to address the problem. This section should outline the methodology and explain the rationale behind key decisions.</p>
+            </div>
+
+            <!-- Tools & Technologies Section -->
+            <div class="project-section">
+                <h2>Tools & Technologies</h2>
+                <div class="tools-list">
+                    <span class="tool-tag">Python</span>
+                    <span class="tool-tag">SQL</span>
+                    <span class="tool-tag">Tableau</span>
+                    <span class="tool-tag">Excel</span>
+                </div>
+            </div>
+
+            <!-- Key Insights Section -->
+            <div class="project-section">
+                <h2>Key Insights</h2>
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <h3>Insight 1</h3>
+                        <p>Description of the first key insight discovered during the project analysis.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Insight 2</h3>
+                        <p>Description of the second key insight discovered during the project analysis.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Insight 3</h3>
+                        <p>Description of the third key insight discovered during the project analysis.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screenshots Section -->
+            <div class="project-section">
+                <h2>Screenshots & Visualizations</h2>
+                <div class="screenshots-grid">
+                    <img src="../images/screenshot1.jpg" alt="Screenshot 1" class="screenshot">
+                    <img src="../images/screenshot2.jpg" alt="Screenshot 2" class="screenshot">
+                </div>
+            </div>
+
+            <!-- Conclusion Section -->
+            <div class="project-section">
+                <h2>Conclusion</h2>
+                <p>A summary of what was learned from the project and potential next steps or future improvements. This section should reflect on the project's outcomes and their implications.</p>
+            </div>
+
+            <!-- Project Buttons -->
+            <div class="project-buttons">
+                <a href="../index.html#projects" class="btn primary-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+                <a href="https://github.com/username/project-repo" target="_blank" class="btn secondary-btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Aditi Kadam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+    <script src="../js/case-study-enhancements.js"></script>
+</body>
+</html>

@@ -8,7 +8,47 @@
 // Array of project objects
 const projects = [
     {
+        id: 10,
+        title: "COVID-19 Data Analysis",
+        description: "Explored the global impact of COVID-19 using Tableau visualizations to uncover trends in deaths, comorbidities, policy response, and healthcare strain.",
+        image: "images/Covid card image.webp",
+        github: "https://github.com/aditidkadam/Covid-19-Data-Analysis",
+        categories: ["visualization"]
+    },
+    {
         id: 1,
+        title: "Netflix Data Analysis",
+        description: "I explored trends across Netflix's global content catalog using Python. From genre popularity to country-based contributions, I uncovered what makes Netflix's content strategy tick.",
+        image: "images/netflix-logo.png",
+        github: "https://github.com/aditidkadam/NETFLIX-DATA-ANALYSIS",
+        categories: ["visualization", "ml"]
+    },
+    {
+        id: 2,
+        title: "Movie Data Portfolio",
+        description: "This project dives into what makes a movie successful — analyzing revenue, IMDb scores, genres, and more. It's where storytelling meets data science.",
+        image: "images/movie data portfolio.jpeg",
+        github: "https://github.com/aditidkadam/Movie_Data_Portfolio",
+        categories: ["visualization", "ml"]
+    },
+    {
+        id: 3,
+        title: "Manufacturing Quality Control",
+        description: "I used SQL to simulate a real-time quality control system on a manufacturing line. It calculates rolling averages, control limits, and flags parts that fall out of spec.",
+        image: "images/quality_control.png",
+        github: "https://github.com/aditidkadam/Manufacturing-Quality-Control/blob/main/README.md",
+        categories: ["visualization"]
+    },
+    {
+        id: 4,
+        title: "Excel-Based Operations Dashboard",
+        description: "Built a full dashboard in Excel to track order flow, delivery delays, and department performance using charts, KPIs, and slicers — no code required.",
+        image: "images/operational_management.jpeg",
+        github: "https://github.com/aditidkadam/Excel-Based-Operations-Management-Dashboard",
+        categories: ["visualization"]
+    },
+    {
+        id: 5,
         title: "Ghost Jobs Detection",
         description: "Used machine learning algorithms to identify fraudulent job postings by analyzing patterns and anomalies in job listing data.",
         image: "images/ghost-job-image.png",
@@ -16,7 +56,7 @@ const projects = [
         categories: ["ml", "nlp"]
     },
     {
-        id: 2,
+        id: 6,
         title: "Diamond Price Analysis (0.7–0.89ct)",
         description: "Conducted statistical analysis on diamond pricing factors, focusing on the 0.7-0.89ct range to identify key value determinants.",
         image: "images/diamond-image.png",
@@ -24,7 +64,7 @@ const projects = [
         categories: ["visualization", "ml"]
     },
     {
-        id: 3,
+        id: 7,
         title: "Smart Pricing for Ride-Sharing Apps",
         description: "Developed a dynamic pricing model for ride-sharing services using historical data, demand patterns, and external factors.",
         image: "images/smart-pricing.avif",
@@ -32,7 +72,7 @@ const projects = [
         categories: ["ml"]
     },
     {
-        id: 4,
+        id: 8,
         title: "HubSpot Contact Analysis",
         description: "Created interactive dashboards to analyze customer engagement patterns and optimize marketing strategies using HubSpot data.",
         image: "images/hubspot-logo.png",
@@ -40,7 +80,7 @@ const projects = [
         categories: ["visualization"]
     },
     {
-        id: 5,
+        id: 9,
         title: "DataCamp Projects",
         description: "A collection of data analysis and visualization projects completed on the DataCamp platform.",
         image: "images/datacamp-logo.png",
@@ -49,24 +89,57 @@ const projects = [
     }
 ];
 
+// Function to get the filename for a project based on its ID
+function getProjectFileName(id) {
+    switch(id) {
+        case 1:
+            return "netflix-data-analysis.html";
+        case 2:
+            return "movie-data-portfolio.html";
+        case 3:
+            return "manufacturing-quality-control.html";
+        case 4:
+            return "excel-operations-dashboard.html";
+        case 5:
+            return "ghost-jobs-detection.html";
+        case 6:
+            return "diamond-price-analysis.html";
+        case 7:
+            return "smart-pricing-ride-sharing.html";
+        case 8:
+            return "hubspot-contact-analysis.html";
+        case 9:
+            return "datacamp-projects.html";
+        case 10:
+            return "covid-19-data-analysis.html";
+        default:
+            return "#";
+    }
+}
+
 // Function to create project cards
 function createProjectCard(project) {
     // Create the main card element
     const card = document.createElement('div');
     card.className = `project-card ${project.categories.join(' ')}`;
 
+    // Get the project URL
+    const projectUrl = `projects/${getProjectFileName(project.id)}`;
+
     // Create the HTML structure for the card
     card.innerHTML = `
-        <div class="project-img-container">
-            <img src="${project.image}" class="project-img" alt="${project.title}">
-        </div>
-        <div class="project-content">
-            <h3 class="project-title">${project.title}</h3>
-            <p class="project-description">${project.description}</p>
-            <a href="${project.github}" target="_blank" class="project-link">
-                <i class="fab fa-github"></i> View on GitHub
-            </a>
-        </div>
+        <a href="${projectUrl}" class="card-link" style="display: block; text-decoration: none; color: inherit;">
+            <div class="project-img-container">
+                <img src="${project.image}" class="project-img" alt="${project.title}">
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">${project.title}</h3>
+                <p class="project-description">${project.description}</p>
+                <span class="project-link">
+                    <i class="fas fa-book-open"></i> View Case Study
+                </span>
+            </div>
+        </a>
     `;
 
     return card;

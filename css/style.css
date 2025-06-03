@@ -349,9 +349,19 @@ iframe.profile-img {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.project-img {
+.project-img-container {
     width: 100%;
     height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     background-color: #fff;
 }
@@ -383,10 +393,30 @@ iframe.project-img {
     align-items: center;
     gap: 5px;
     font-weight: 500;
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: var(--light-green);
 }
 
 .project-link i {
     font-size: 0.9rem;
+}
+
+.project-link:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.card-link {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+}
+
+.card-link:hover {
+    color: inherit;
 }
 
 /* ===== EXPERIENCE SECTION ===== */

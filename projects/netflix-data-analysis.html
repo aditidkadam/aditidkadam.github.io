@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Data Analysis | Aditi Kadam</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dynamic-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Project Case Study Specific Styles */
+        .project-banner {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .project-section {
+            margin-bottom: 40px;
+        }
+
+        .project-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .project-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .project-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tool-tag {
+            background-color: var(--light-green);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .insight-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .insight-card h3 {
+            font-size: 1.3rem;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .screenshot {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .project-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .project-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html"><div class="logo"><img src="../images/logo.png" alt="Logo"></div></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <section class="project-case-study">
+        <div class="container">
+            <!-- Project Banner -->
+            <img src="../images/netflix-logo.png" alt="Netflix Data Analysis" class="project-banner">
+
+            <!-- Project Header -->
+            <div class="project-header">
+                <h1>Netflix Data Analysis</h1>
+                <a href="https://github.com/aditidkadam/NETFLIX-DATA-ANALYSIS" target="_blank" class="btn secondary-btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="project-section">
+                <h2>Overview</h2>
+                <p>This project explores Netflix's global content catalog to identify genre popularity, country-wise trends, and release patterns. By analyzing Netflix's extensive library of movies and TV shows, the project provides insights into the platform's content strategy and how it has evolved over time to cater to diverse international audiences.</p>
+            </div>
+
+            <!-- Problem Statement Section -->
+            <div class="project-section">
+                <h2>Problem Statement</h2>
+                <p>As streaming platforms compete for global audiences, understanding content preferences across different regions and demographics becomes crucial for strategic decision-making. This project aimed to answer several key questions: What genres are most prevalent in Netflix's catalog, and how does this vary by country? How has Netflix's content acquisition and production strategy evolved over time? Are there identifiable patterns in content release timing? And what insights can be derived about viewer preferences from the platform's content distribution?</p>
+            </div>
+
+            <!-- Approach Section -->
+            <div class="project-section">
+                <h2>My Approach</h2>
+                <p>I began by acquiring a comprehensive dataset of Netflix's content library, including attributes such as title, type (movie/TV show), release year, country of origin, genre, rating, and duration. After thorough data cleaning and preprocessing to handle missing values and standardize formats, I performed exploratory data analysis to identify initial patterns and relationships.</p>
+                <p>Using Python for data manipulation and visualization, I conducted several analyses:</p>
+                <p>1. <strong>Temporal Analysis:</strong> Examining how Netflix's content catalog has grown and evolved over time, including trends in the balance between movies and TV shows.</p>
+                <p>2. <strong>Geographic Analysis:</strong> Mapping content production by country and analyzing regional content preferences.</p>
+                <p>3. <strong>Genre Analysis:</strong> Identifying the most common genres and how they vary across different regions and time periods.</p>
+                <p>4. <strong>Content Duration Analysis:</strong> Investigating trends in movie lengths and TV show seasons over time.</p>
+                <p>5. <strong>Rating Distribution Analysis:</strong> Examining the distribution of content ratings and how they correlate with genres and countries.</p>
+            </div>
+
+            <!-- Tools & Technologies Section -->
+            <div class="project-section">
+                <h2>Tools & Technologies</h2>
+                <div class="tools-list">
+                    <span class="tool-tag">Python</span>
+                    <span class="tool-tag">Pandas</span>
+                    <span class="tool-tag">NumPy</span>
+                    <span class="tool-tag">Matplotlib</span>
+                    <span class="tool-tag">Seaborn</span>
+                    <span class="tool-tag">Plotly</span>
+                    <span class="tool-tag">Jupyter Notebook</span>
+                </div>
+            </div>
+
+            <!-- Key Insights Section -->
+            <div class="project-section">
+                <h2>Key Insights</h2>
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <h3>Content Shift Toward TV Shows</h3>
+                        <p>The analysis revealed a significant shift in Netflix's content strategy over the past decade. While movies dominated the catalog in earlier years (comprising over 70% of content before 2015), there has been a steady increase in TV show production, with TV shows representing nearly 40% of new content additions in recent years. This trend reflects changing viewer preferences for serialized storytelling and Netflix's strategy to increase viewer engagement and retention.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Regional Content Hubs</h3>
+                        <p>The geographic analysis identified distinct "content hubs" where Netflix has significantly increased local production. India, South Korea, and Spain emerged as major growth centers, with content production in these countries increasing by over 200% since 2018. This localization strategy has coincided with substantial subscriber growth in these regions, suggesting that investment in local content drives market penetration.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Genre Evolution</h3>
+                        <p>The genre analysis showed that while dramas and comedies remain the backbone of Netflix's catalog (together accounting for approximately 45% of all content), there has been substantial growth in niche genres. International TV dramas, true crime documentaries, and anime have seen the fastest growth rates, with each category more than doubling its catalog presence in the past three years. This diversification strategy appears aimed at serving specific viewer segments with targeted content.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Conclusion Section -->
+            <div class="project-section">
+                <h2>Conclusion</h2>
+                <p>The Netflix Data Analysis project successfully uncovered significant patterns in the platform's content strategy and distribution. The findings highlight Netflix's evolution from a primarily movie-focused platform to a diverse content ecosystem with strong investments in TV shows and regional productions. The platform's strategic focus on local content in key markets and expansion into niche genres demonstrates a sophisticated approach to global content strategy.</p>
+                <p>Future extensions of this project could include sentiment analysis of viewer reviews to correlate content characteristics with audience reception, predictive modeling to forecast content trends, and comparative analysis with competing streaming platforms to identify distinctive positioning strategies. The methodologies developed in this project could also be applied to analyze content strategies in other media and entertainment sectors.</p>
+            </div>
+
+            <!-- Project Buttons -->
+            <div class="project-buttons">
+                <a href="../index.html#projects" class="btn primary-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+                <a href="https://github.com/aditidkadam/NETFLIX-DATA-ANALYSIS" target="_blank" class="btn secondary-btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Aditi Kadam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

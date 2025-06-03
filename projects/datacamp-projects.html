@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataCamp Projects | Aditi Kadam</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dynamic-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Project Case Study Specific Styles */
+        .project-banner {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .project-section {
+            margin-bottom: 40px;
+        }
+
+        .project-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .project-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .project-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tool-tag {
+            background-color: var(--light-green);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .insight-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .insight-card h3 {
+            font-size: 1.3rem;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .screenshot {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .project-list {
+            margin-top: 20px;
+        }
+
+        .project-item {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .project-item h3 {
+            font-size: 1.3rem;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .project-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .project-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html"><div class="logo"><img src="../images/logo.png" alt="Logo"></div></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <section class="project-case-study">
+        <div class="container">
+            <!-- Project Banner -->
+            <img src="../images/datacamp-logo.png" alt="DataCamp Projects" class="project-banner">
+
+            <!-- Project Header -->
+            <div class="project-header">
+                <h1>DataCamp Projects</h1>
+                <a href="https://github.com/aditidkadam/Data_camp_projects" target="_blank" class="btn secondary-btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="project-section">
+                <h2>Overview</h2>
+                <p>This collection showcases a series of guided mini-projects completed on the DataCamp platform, demonstrating proficiency in Python and SQL for data analysis and visualization. Each project addresses a specific real-world problem and follows a structured data science workflow from data acquisition to insight generation.</p>
+            </div>
+
+            <!-- Problem Statement Section -->
+            <div class="project-section">
+                <h2>Problem Statement</h2>
+                <p>While theoretical knowledge of data science concepts is important, practical application of these concepts to real-world datasets is essential for developing true proficiency. These projects were undertaken to bridge the gap between theory and practice, applying data analysis techniques to diverse domains including finance, healthcare, marketing, and social media.</p>
+                <p>Each project addressed specific analytical challenges, such as: How can we identify trends in time series data? What factors influence customer behavior? How can we extract meaningful patterns from unstructured text data? And how can we effectively visualize complex relationships in multidimensional datasets?</p>
+            </div>
+
+            <!-- Approach Section -->
+            <div class="project-section">
+                <h2>My Approach</h2>
+                <p>For each project, I followed a systematic data science workflow:</p>
+                <p>1. <strong>Data Acquisition and Exploration:</strong> Loading datasets, examining their structure, and performing initial exploratory data analysis to understand distributions and relationships.</p>
+                <p>2. <strong>Data Cleaning and Preprocessing:</strong> Handling missing values, removing duplicates, transforming variables, and preparing the data for analysis.</p>
+                <p>3. <strong>Analysis and Modeling:</strong> Applying appropriate statistical methods, machine learning algorithms, or data visualization techniques to extract insights from the data.</p>
+                <p>4. <strong>Interpretation and Communication:</strong> Translating technical findings into clear, actionable insights and creating visualizations to effectively communicate results.</p>
+                <p>Throughout these projects, I emphasized reproducible analysis by documenting my code, explaining my reasoning, and ensuring that results could be replicated by others.</p>
+            </div>
+
+            <!-- Tools & Technologies Section -->
+            <div class="project-section">
+                <h2>Tools & Technologies</h2>
+                <div class="tools-list">
+                    <span class="tool-tag">Python</span>
+                    <span class="tool-tag">Pandas</span>
+                    <span class="tool-tag">NumPy</span>
+                    <span class="tool-tag">Matplotlib</span>
+                    <span class="tool-tag">Seaborn</span>
+                    <span class="tool-tag">Scikit-learn</span>
+                    <span class="tool-tag">SQL</span>
+                    <span class="tool-tag">Jupyter Notebook</span>
+                </div>
+            </div>
+
+            <!-- Featured Projects Section -->
+            <div class="project-section">
+                <h2>Featured Projects</h2>
+                <div class="project-list">
+                    <div class="project-item">
+                        <h3>Analyzing Netflix Movies and TV Shows</h3>
+                        <p>Explored Netflix's content library to identify trends in movie durations, analyze the distribution of content across countries, and examine how the platform's content strategy has evolved over time. The analysis revealed a significant shift toward shorter-form content and international productions in recent years.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Investigating COVID-19 Virus Trends</h3>
+                        <p>Analyzed COVID-19 data to compare virus spread patterns across different countries and regions. Used time series analysis to identify infection rate trends and visualized the effectiveness of various intervention strategies. The project highlighted the importance of early containment measures in reducing peak infection rates.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Analyzing Customer Churn in Telecom</h3>
+                        <p>Built a predictive model to identify customers at risk of churning from a telecom service. Feature importance analysis revealed that contract type, tenure, and monthly charges were the strongest predictors of churn behavior. The resulting model achieved 82% accuracy in identifying at-risk customers.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Exploring NYC Public School Test Results</h3>
+                        <p>Used SQL to analyze standardized test performance across New York City schools, investigating relationships between school demographics, resources, and student achievement. The analysis identified significant disparities in test scores based on borough and school funding levels.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Insights Section -->
+            <div class="project-section">
+                <h2>Key Insights</h2>
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <h3>Data Cleaning Importance</h3>
+                        <p>Across all projects, data preparation consistently required 60-70% of the total analysis time, reinforcing that effective data cleaning and preprocessing are critical foundations for successful data analysis. Projects with more thorough data preparation phases generally produced more reliable and actionable insights.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Visualization Power</h3>
+                        <p>The most impactful findings were often discovered through exploratory visualization rather than complex statistical tests. Interactive visualizations that allowed for drilling down into specific segments or time periods were particularly effective for identifying patterns that might otherwise remain hidden in aggregate statistics.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Domain Knowledge Value</h3>
+                        <p>Projects where I had stronger background knowledge of the subject matter yielded more nuanced and valuable insights. This highlighted the importance of combining technical data skills with domain expertise to ask the right questions and correctly interpret results in their proper context.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Conclusion Section -->
+            <div class="project-section">
+                <h2>Conclusion</h2>
+                <p>This collection of DataCamp projects demonstrates proficiency across a range of data analysis techniques and tools. Through these projects, I've developed practical skills in data manipulation, statistical analysis, machine learning, and data visualization that can be applied to solve real-world business problems.</p>
+                <p>Future directions include expanding into more advanced machine learning techniques, developing skills in deep learning and natural language processing, and tackling larger, more complex datasets that require distributed computing approaches. The foundation built through these projects provides a solid platform for continued growth in the field of data science.</p>
+            </div>
+
+            <!-- Project Buttons -->
+            <div class="project-buttons">
+                <a href="../index.html#projects" class="btn primary-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+                <a href="https://github.com/aditidkadam/Data_camp_projects" target="_blank" class="btn secondary-btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Aditi Kadam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

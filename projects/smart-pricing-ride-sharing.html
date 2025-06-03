@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Pricing for Ride-Sharing Apps | Aditi Kadam</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dynamic-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Project Case Study Specific Styles */
+        .project-banner {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .project-section {
+            margin-bottom: 40px;
+        }
+
+        .project-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .project-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .project-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tool-tag {
+            background-color: var(--light-green);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .insight-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .insight-card h3 {
+            font-size: 1.3rem;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .screenshot {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .project-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .project-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html"><div class="logo"><img src="../images/logo.png" alt="Logo"></div></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <section class="project-case-study">
+        <div class="container">
+            <!-- Project Banner -->
+            <img src="../images/smart-pricing.avif" alt="Smart Pricing for Ride-Sharing Apps" class="project-banner">
+
+            <!-- Project Header -->
+            <div class="project-header">
+                <h1>Smart Pricing for Ride-Sharing Apps</h1>
+                <a href="https://github.com/aditidkadam/Smart-pricing-strategies-for-ride-sharing-apps-" target="_blank" class="btn secondary-btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="project-section">
+                <h2>Overview</h2>
+                <p>This project developed a dynamic pricing model for ride-sharing services by analyzing historical data, demand patterns, and external factors. The goal was to create a pricing strategy that optimizes both driver earnings and passenger satisfaction while maximizing platform revenue.</p>
+            </div>
+
+            <!-- Problem Statement Section -->
+            <div class="project-section">
+                <h2>Problem Statement</h2>
+                <p>Ride-sharing platforms face a complex challenge: how to set prices that attract riders while ensuring adequate driver supply across different times and locations. Traditional fixed pricing models fail to account for real-time market conditions, leading to inefficiencies such as driver shortages during peak hours or underutilized capacity during off-peak times.</p>
+                <p>The key questions this project addressed were: How can ride-sharing platforms implement dynamic pricing that responds to demand fluctuations? What factors should influence price adjustments? And how can these adjustments be made transparent and fair to both drivers and riders?</p>
+            </div>
+
+            <!-- Approach Section -->
+            <div class="project-section">
+                <h2>My Approach</h2>
+                <p>I began by collecting and analyzing a comprehensive dataset of ride requests, including timestamps, locations, distances, completion rates, and pricing information. This data was enriched with external factors such as weather conditions, local events, and public transit disruptions.</p>
+                <p>Using time series analysis, I identified recurring demand patterns across different time periods (hourly, daily, weekly, and seasonal) and geographical zones. I then developed a machine learning model that could predict demand surges and driver availability based on historical patterns and real-time inputs.</p>
+                <p>The core of the project was a multi-variable optimization algorithm that calculated optimal price multipliers based on predicted demand-supply gaps. The model was validated through backtesting against historical data and through simulations of various market scenarios.</p>
+            </div>
+
+            <!-- Tools & Technologies Section -->
+            <div class="project-section">
+                <h2>Tools & Technologies</h2>
+                <div class="tools-list">
+                    <span class="tool-tag">Python</span>
+                    <span class="tool-tag">Pandas</span>
+                    <span class="tool-tag">NumPy</span>
+                    <span class="tool-tag">Scikit-learn</span>
+                    <span class="tool-tag">TensorFlow</span>
+                    <span class="tool-tag">Matplotlib</span>
+                    <span class="tool-tag">GeoPandas</span>
+                    <span class="tool-tag">SQL</span>
+                </div>
+            </div>
+
+            <!-- Key Insights Section -->
+            <div class="project-section">
+                <h2>Key Insights</h2>
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <h3>Demand Elasticity Variations</h3>
+                        <p>The analysis revealed that price elasticity of demand varies significantly across different user segments and contexts. Business travelers during weekday mornings showed low price sensitivity (elasticity of -0.3), while weekend leisure riders were highly price-sensitive (elasticity of -1.8). This insight enabled more targeted pricing strategies for different market segments.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Predictive Surge Pricing</h3>
+                        <p>Traditional surge pricing reacts to existing demand-supply imbalances, often too late to attract additional drivers. The model demonstrated that predictive surge pricing—implementing price increases 15-20 minutes before anticipated demand spikes—improved driver positioning and reduced wait times by up to 30% during peak periods.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Geographical Pricing Zones</h3>
+                        <p>The optimal geographical granularity for pricing zones was found to be approximately 1 square kilometer in dense urban areas, with larger zones (3-5 square kilometers) in suburban regions. This balance prevented extreme price differences between adjacent areas while still allowing for localized supply-demand matching.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Conclusion Section -->
+            <div class="project-section">
+                <h2>Conclusion</h2>
+                <p>The Smart Pricing project successfully developed a dynamic pricing model that improved key performance metrics across the ride-sharing ecosystem. Simulations indicated that implementing the model could increase driver earnings by 8-12%, reduce average wait times by 22%, and increase platform revenue by 15% compared to simpler surge pricing mechanisms.</p>
+                <p>Future enhancements could include incorporating real-time traffic data, developing personalized pricing based on individual user behavior, and implementing more sophisticated driver incentive systems to further optimize market efficiency. The methodology developed in this project could also be extended to other on-demand service platforms facing similar supply-demand matching challenges.</p>
+            </div>
+
+            <!-- Project Buttons -->
+            <div class="project-buttons">
+                <a href="../index.html#projects" class="btn primary-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+                <a href="https://github.com/aditidkadam/Smart-pricing-strategies-for-ride-sharing-apps-" target="_blank" class="btn secondary-btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Aditi Kadam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

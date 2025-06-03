@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Price Analysis | Aditi Kadam</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dynamic-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Project Case Study Specific Styles */
+        .project-banner {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .project-section {
+            margin-bottom: 40px;
+        }
+
+        .project-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .project-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .project-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tool-tag {
+            background-color: var(--light-green);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .insight-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .insight-card h3 {
+            font-size: 1.3rem;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .screenshot {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .project-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .project-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .project-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html"><div class="logo"><img src="../images/logo.png" alt="Logo"></div></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <section class="project-case-study">
+        <div class="container">
+            <!-- Project Banner -->
+            <img src="../images/diamond-image.png" alt="Diamond Price Analysis" class="project-banner">
+
+            <!-- Project Header -->
+            <div class="project-header">
+                <h1>Diamond Price Analysis (0.7–0.89ct)</h1>
+                <a href="https://github.com/aditidkadam/Comprehensive-Analysis-of-Round-Shape-Diamonds-0.7ct-0.89ct-" target="_blank" class="btn secondary-btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="project-section">
+                <h2>Overview</h2>
+                <p>This project conducts a comprehensive statistical analysis of diamond pricing factors, with a specific focus on round-shaped diamonds in the 0.7-0.89 carat range. By examining various attributes that influence diamond value, the analysis provides insights into what truly determines a diamond's market price in this specific weight category.</p>
+            </div>
+
+            <!-- Problem Statement Section -->
+            <div class="project-section">
+                <h2>Problem Statement</h2>
+                <p>Diamond pricing is complex and often opaque to consumers. While the "4Cs" (carat, cut, color, clarity) are well-known factors, their relative importance and interaction effects are not always clear, especially within specific carat ranges. This project aimed to answer: What are the most significant determinants of diamond prices specifically in the 0.7-0.89 carat range, and how can this knowledge help consumers make more informed purchasing decisions?</p>
+            </div>
+
+            <!-- Approach Section -->
+            <div class="project-section">
+                <h2>My Approach</h2>
+                <p>I collected a dataset of over 5,000 round diamonds within the 0.7-0.89 carat range, including detailed information on their physical attributes and market prices. After cleaning and preprocessing the data, I performed exploratory data analysis to identify initial patterns and relationships.</p>
+                <p>I then conducted statistical analyses including correlation studies, multiple regression modeling, and ANOVA tests to quantify the impact of each attribute on price. I also examined interaction effects between variables to understand how combinations of features influence pricing beyond their individual contributions.</p>
+                <p>To validate the findings, I developed predictive models and tested them against a holdout sample of diamond prices, measuring accuracy through RMSE and R-squared metrics.</p>
+            </div>
+
+            <!-- Tools & Technologies Section -->
+            <div class="project-section">
+                <h2>Tools & Technologies</h2>
+                <div class="tools-list">
+                    <span class="tool-tag">Python</span>
+                    <span class="tool-tag">Pandas</span>
+                    <span class="tool-tag">NumPy</span>
+                    <span class="tool-tag">Matplotlib</span>
+                    <span class="tool-tag">Seaborn</span>
+                    <span class="tool-tag">Scikit-learn</span>
+                    <span class="tool-tag">Statsmodels</span>
+                </div>
+            </div>
+
+            <!-- Key Insights Section -->
+            <div class="project-section">
+                <h2>Key Insights</h2>
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <h3>Cut Quality Premium</h3>
+                        <p>Within the 0.7-0.89ct range, the premium for an "Excellent" cut over a "Very Good" cut was approximately 15-20%, significantly higher than in other carat ranges. This suggests that cut quality becomes particularly important as diamonds approach the psychologically significant 1-carat threshold.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Color-Clarity Trade-off</h3>
+                        <p>The analysis revealed an optimal "sweet spot" where slightly sacrificing color grade (e.g., going from D to F) while maintaining a higher clarity grade often resulted in better value for consumers. This trade-off was more pronounced in this carat range than in smaller diamonds.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Price Discontinuities</h3>
+                        <p>Sharp price jumps were observed at specific thresholds (e.g., between VS1 and VVS2 clarity), rather than a continuous price gradient. These discontinuities create opportunities for value-conscious consumers to position their purchases just below premium thresholds.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screenshots Section -->
+            <div class="project-section">
+                <h2>Screenshots & Visualizations</h2>
+                <div class="screenshots-grid">
+                    <img src="../images/diamond dashboard screenshot.png" alt="Diamond Price Analysis Visualization" class="screenshot">
+                </div>
+            </div>
+
+            <!-- Conclusion Section -->
+            <div class="project-section">
+                <h2>Conclusion</h2>
+                <p>The Diamond Price Analysis project successfully identified the key factors driving diamond prices in the 0.7-0.89 carat range. The findings challenge some conventional wisdom about diamond valuation and provide actionable insights for consumers looking to maximize value in this specific market segment.</p>
+                <p>Future work could expand this analysis to other diamond shapes, explore temporal price trends, or incorporate additional factors such as fluorescence and certification differences. The methodologies developed in this project could also be applied to other luxury goods markets where pricing factors are complex and multidimensional.</p>
+            </div>
+
+            <!-- Project Buttons -->
+            <div class="project-buttons">
+                <a href="../index.html#projects" class="btn primary-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+                <a href="https://github.com/aditidkadam/Comprehensive-Analysis-of-Round-Shape-Diamonds-0.7ct-0.89ct-" target="_blank" class="btn secondary-btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Aditi Kadam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+</body>
+</html>
